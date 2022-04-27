@@ -10,8 +10,8 @@ CASE WHEN Enrolled BETWEEN 1 AND 20 then '1-20'
      WHEN Enrolled BETWEEN 125 AND 168 then '125-168'
      END AS classsize,
 COUNT(SE.Section_Number) AS Sections,
-(COUNT(SE.Section_Number)/14) AS ClassRoom_Size_7,
-(COUNT(SE.Section_Number)/16) AS ClassRoom_Size_8
+(COUNT(SE.Section_Number)/7) AS ClassRoom_Size_7,
+(COUNT(SE.Section_Number)/8) AS ClassRoom_Size_8
 FROM section_t AS SE 
 WHERE 
 SE.YEAR='$y' AND Session='$s'
@@ -20,8 +20,8 @@ HAVING classsize IS NOT NULL
 UNION
      SELECT 'Total' AS classsize, 
      COUNT(SE.Section_Number) AS sections, 
-     COUNT(SE.Section_Number) / 12 AS classroom6, 
-     COUNT(SE.Section_Number) / 14 AS classroom7
+     COUNT(SE.Section_Number) / 7 AS classroom7, 
+     COUNT(SE.Section_Number) / 8 AS classroom8
      FROM section_t AS SE
      WHERE SE.Enrolled BETWEEN 1 AND 65 AND SE.YEAR='$year' AND Session='$semester';
   ");
