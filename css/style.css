@@ -1,0 +1,52 @@
+.sidebar{
+  height: 100%;
+  width:300px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #e7e7e7;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+
+.hover_effect:hover{
+    background: rgb(192, 188, 188);
+}
+
+.main_contents{
+    margin-left: 270px;
+    text-align: center;
+}
+
+
+.title_font{
+    font-family: 'Alfa Slab One', cursive;
+}
+
+
+.dropDown_bar{
+    border: none;
+    height:40px;
+    min-width: 200px;
+    border-radius:10px;
+    padding: 0px 10px 0px 45px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+}
+
+.navbar-default .navbar-nav > li > a{
+    color: #e9b846;
+  }
+  .navbar-default .navbar-nav > li > a:hover{
+    background-color: #e9b846;
+    color: #FFFFFF;
+  }
+  a {
+    border:1px solid red;
+    display:inline-block;
+    padding:5px;
+    margin:2px;
+}
